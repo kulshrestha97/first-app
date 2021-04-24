@@ -28,6 +28,9 @@ function App() {
 
   const expenseDataHandler = (expenseData) => {
     console.log("In App.js");
+    setExpenses((prevExpenses) => {
+      return [expenseData, ...prevExpenses];
+    });
   };
 
   return (
